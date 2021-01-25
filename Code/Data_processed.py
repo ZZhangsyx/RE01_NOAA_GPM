@@ -102,8 +102,8 @@ def GEE_download(point_path, Satellite_name, Basin_name, BN, StartDate, EndDate,
     :param GEE_Web: GEE data's website
     :param bands: Define the bands of GEE data which need to be downloaded
     """
-    os.environ['HTTP_PROXY'] = 'http://127.0.0.1:10809'
-    os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:10809'
+    os.environ['HTTP_PROXY'] = 'http://127.0.0.1:1080'
+    os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:1080'
     ee.Initialize()
 
     out_path = os.path.join(point_path, Satellite_name + '_' + BN)
