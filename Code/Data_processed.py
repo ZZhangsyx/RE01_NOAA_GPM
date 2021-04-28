@@ -562,16 +562,16 @@ def main():
     processed_path = '../data/processed_' + BN
     DEA_path = '../data/processed_' + BN + '/DEA'
 
-    # ShpToBoundary(Basin, SpaceScale, shp_path, save_path, Basin_name, isShow=isShow)
-    # GEE_download(save_path, Satellite_name, Basin_name, BN, StartDate, EndDate,
-    #              TimeScale, GEE_Web, bands)
-    # Create_Dataset_Satellite(save_path, dataset_path, StartDate, EndDate, Satellite_name, bands, BN)
-    # Create_Dataset_CMPA(Raw_path, dataset_path, Basin_name, Basin, SpaceScale, CN)
-    # Create_Dataset_GPM(Raw_path, dataset_path, StartDate, EndDate, Basin_name, Basin, SpaceScale, CN)
+    ShpToBoundary(Basin, SpaceScale, shp_path, save_path, Basin_name, isShow=isShow)
+    GEE_download(save_path, Satellite_name, Basin_name, BN, StartDate, EndDate,
+                 TimeScale, GEE_Web, bands)
+    Create_Dataset_Satellite(save_path, dataset_path, StartDate, EndDate, Satellite_name, bands, BN)
+    Create_Dataset_CMPA(Raw_path, dataset_path, Basin_name, Basin, SpaceScale, CN)
+    Create_Dataset_GPM(Raw_path, dataset_path, StartDate, EndDate, Basin_name, Basin, SpaceScale, CN)
     Create_Dataset_GPF(Raw_path, processed_path, StartDate, EndDate, Basin_name, Basin, SpaceScale, BN, CN)
-    # Create_Dataset_Sta(STA_path, processed_path, STA_name, Basin_name, StartDate, EndDate, BN)
-    # Create_csv(save_path, Basin, SpaceScale, Basin_name, BN, StartDate, EndDate)
-    # Csv_DEA(save_path, DEA_path, Basin_name, BN)
+    Create_Dataset_Sta(STA_path, processed_path, STA_name, Basin_name, StartDate, EndDate, BN)
+    Create_csv(save_path, Basin, SpaceScale, Basin_name, BN, StartDate, EndDate)
+    Csv_DEA(save_path, DEA_path, Basin_name, BN)
 
 
 if __name__ == '__main__':
